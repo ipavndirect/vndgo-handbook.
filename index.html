@@ -437,6 +437,17 @@
       margin-bottom: 6px;
     }
 
+    .task-header-row {
+      align-items: center;
+      grid-template-columns: 220px 1fr 220px;
+    }
+
+    .task-header-row .task-block-title {
+      font-size: .82rem;
+      white-space: nowrap;
+      margin-bottom: 0;
+    }
+
     .task-details ul {
       list-style: none;
       display: grid;
@@ -1098,29 +1109,34 @@
             </div>
           </div>
           <div class="roadmap-items">
-            <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Hoàn thành thủ tục nhân sự</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul class="support-links"><li>Hoàn thiện hồ sơ nhân sự</li><li>Đăng ký FaceID chấm công</li><li>Cập nhật CCHN (nếu có)</li></ul></div>
-              <div><div class="task-block-title" style="font-size:.75rem;white-space:nowrap;">Mục tiêu/ Người đồng hành</div><div class="result-chip">Sẵn sàng bắt đầu</div><div class="buddy-chip">HR / Manager</div></div>
+            <div class="task-item task-header-row">
+              <div><div class="task-block-title">Bạn sẽ làm gì</div></div>
+              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div></div>
+              <div><div class="task-block-title">Mục tiêu/ Người đồng hành</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Nhận thông tin username</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Nhận username</li><li>Login hệ thống</li></ul></div>
+              <div><div class="task-what">Hoàn thành thủ tục nhân sự</div></div>
+              <div class="task-details"><ul class="support-links"><li>Hoàn thiện hồ sơ nhân sự</li><li>Đăng ký FaceID chấm công</li><li>Cập nhật CCHN (nếu có)</li></ul></div>
+              <div><div class="result-chip">Sẵn sàng bắt đầu</div><div class="buddy-chip">HR / Manager</div></div>
+            </div>
+            <div class="task-item">
+              <div><div class="task-what">Nhận thông tin username</div></div>
+              <div class="task-details"><ul><li>Nhận username</li><li>Login hệ thống</li></ul></div>
               <div><div class="result-chip">Truy cập hệ thống</div><div class="buddy-chip">HR / IT</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Nhận trang thiết bị</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Máy tính, VPP, thẻ xe, thẻ nhân viên</li></ul></div>
+              <div><div class="task-what">Nhận trang thiết bị</div></div>
+              <div class="task-details"><ul><li>Máy tính, VPP, thẻ xe, thẻ nhân viên</li></ul></div>
               <div><div class="result-chip">Đầy đủ công cụ</div><div class="buddy-chip">Hành chính / IT</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Làm quen Mentor</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Được giới thiệu Mentor</li></ul></div>
+              <div><div class="task-what">Làm quen Mentor</div></div>
+              <div class="task-details"><ul><li>Được giới thiệu Mentor</li></ul></div>
               <div><div class="result-chip">Có người đồng hành</div><div class="buddy-chip">Manager</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Nhận thông tin đào tạo</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Check email, tài liệu</li></ul></div>
+              <div><div class="task-what">Nhận thông tin đào tạo</div></div>
+              <div class="task-details"><ul><li>Check email, tài liệu</li></ul></div>
               <div><div class="result-chip">Hiểu lộ trình đào tạo</div><div class="buddy-chip">LnD</div></div>
             </div>
           </div>
@@ -1138,24 +1154,29 @@
             </div>
           </div>
           <div class="roadmap-items">
+            <div class="task-item task-header-row">
+              <div><div class="task-block-title">Bạn sẽ làm gì</div></div>
+              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div></div>
+              <div><div class="task-block-title">Mục tiêu/ Người đồng hành</div></div>
+            </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Hiểu vai trò</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Trao đổi Manager</li><li>Học VND Onboarding</li></ul></div>
+              <div><div class="task-what">Hiểu vai trò</div></div>
+              <div class="task-details"><ul><li>Trao đổi Manager</li><li>Học VND Onboarding</li></ul></div>
               <div><div class="result-chip">Biết mình cần làm gì</div><div class="buddy-chip">Manager / LnD</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Đánh giá năng lực</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Làm KYC onboarding</li></ul></div>
+              <div><div class="task-what">Đánh giá năng lực</div></div>
+              <div class="task-details"><ul><li>Làm KYC onboarding</li></ul></div>
               <div><div class="result-chip">Hiểu điểm mạnh/yếu của bản thân</div><div class="buddy-chip">CAPC</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Trải nghiệm KH</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Mở tài khoản tại VNDIRECT</li><li>Trải nghiệm giao dịch</li></ul></div>
+              <div><div class="task-what">Trải nghiệm KH</div></div>
+              <div class="task-details"><ul><li>Mở tài khoản tại VNDIRECT</li><li>Trải nghiệm giao dịch</li></ul></div>
               <div><div class="result-chip">Hiểu hành trình KH</div><div class="buddy-chip">Mentor</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Trải nghiệm hệ thống</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Login tool nội bộ</li></ul></div>
+              <div><div class="task-what">Trải nghiệm hệ thống</div></div>
+              <div class="task-details"><ul><li>Login tool nội bộ</li></ul></div>
               <div><div class="result-chip">Làm quen công cụ</div><div class="buddy-chip">Mentor</div></div>
             </div>
           </div>
@@ -1173,29 +1194,34 @@
             </div>
           </div>
           <div class="roadmap-items">
+            <div class="task-item task-header-row">
+              <div><div class="task-block-title">Bạn sẽ làm gì</div></div>
+              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div></div>
+              <div><div class="task-block-title">Mục tiêu/ Người đồng hành</div></div>
+            </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Đào tạo &amp; thực hành</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Hoàn thành Job onboarding</li></ul></div>
+              <div><div class="task-what">Đào tạo &amp; thực hành</div></div>
+              <div class="task-details"><ul><li>Hoàn thành Job onboarding</li></ul></div>
               <div><div class="result-chip">Có nền tảng nghề</div><div class="buddy-chip">LnD / Mentor</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Sử dụng hệ thống</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Trải nghiệm các nền tảng dành cho CA: DSB, KMS…</li></ul></div>
+              <div><div class="task-what">Sử dụng hệ thống</div></div>
+              <div class="task-details"><ul><li>Trải nghiệm các nền tảng dành cho CA: DSB, KMS…</li></ul></div>
               <div><div class="result-chip">Thành thạo dần</div><div class="buddy-chip">Mentor</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Phát triển KH</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>≥20 KH tiếp cận</li><li>≥5 TK mới</li><li>≥2 KH trade</li><li>(Hãy trao đổi với Manager để lựa chọn mục tiêu phù hợp nhé)</li></ul></div>
+              <div><div class="task-what">Phát triển KH</div></div>
+              <div class="task-details"><ul><li>≥20 KH tiếp cận</li><li>≥5 TK mới</li><li>≥2 KH trade</li><li>(Hãy trao đổi với Manager để lựa chọn mục tiêu phù hợp nhé)</li></ul></div>
               <div><div class="result-chip">Bắt đầu có kết quả</div><div class="buddy-chip">Manager</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Theo dõi KPI</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Quản lý danh mục</li><li>AUM ≥ X</li><li>(Hãy trao đổi với Manager để lựa chọn mục tiêu phù hợp nhé)</li></ul></div>
+              <div><div class="task-what">Theo dõi KPI</div></div>
+              <div class="task-details"><ul><li>Quản lý danh mục</li><li>AUM ≥ X</li><li>(Hãy trao đổi với Manager để lựa chọn mục tiêu phù hợp nhé)</li></ul></div>
               <div><div class="result-chip">Bám mục tiêu</div><div class="buddy-chip">Manager</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Báo cáo định kỳ</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Update weekly</li></ul></div>
+              <div><div class="task-what">Báo cáo định kỳ</div></div>
+              <div class="task-details"><ul><li>Update weekly</li></ul></div>
               <div><div class="result-chip">Cải thiện liên tục</div><div class="buddy-chip">Manager</div></div>
             </div>
           </div>
@@ -1213,24 +1239,29 @@
             </div>
           </div>
           <div class="roadmap-items">
+            <div class="task-item task-header-row">
+              <div><div class="task-block-title">Bạn sẽ làm gì</div></div>
+              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div></div>
+              <div><div class="task-block-title">Mục tiêu/ Người đồng hành</div></div>
+            </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Đánh giá thử việc</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Báo cáo kết quả thử việc</li></ul></div>
+              <div><div class="task-what">Đánh giá thử việc</div></div>
+              <div class="task-details"><ul><li>Báo cáo kết quả thử việc</li></ul></div>
               <div><div class="result-chip">Hoàn thành thử việc</div><div class="buddy-chip">Manager</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Chính thức</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Ký hợp đồng chính thức</li></ul></div>
+              <div><div class="task-what">Chính thức</div></div>
+              <div class="task-details"><ul><li>Ký hợp đồng chính thức</li></ul></div>
               <div><div class="result-chip">Trở thành CA chính thức</div><div class="buddy-chip">Manager</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Kế hoạch tiếp theo</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Lập plan cho giai đoạn bứt phá tiếp theo</li></ul></div>
+              <div><div class="task-what">Kế hoạch tiếp theo</div></div>
+              <div class="task-details"><ul><li>Lập plan cho giai đoạn bứt phá tiếp theo</li></ul></div>
               <div><div class="result-chip">Sẵn sàng bước tiếp</div><div class="buddy-chip">Manager</div></div>
             </div>
             <div class="task-item">
-              <div><div class="task-block-title">Bạn sẽ làm gì</div><div class="task-what">Cập nhật Profile</div></div>
-              <div class="task-details"><div class="task-block-title">Chi tiết việc cần làm</div><ul><li>Đừng quên cập nhật CA Profile trên hệ thống (Dành cho CA chính thức - đã có CCHN)</li></ul></div>
+              <div><div class="task-what">Cập nhật Profile</div></div>
+              <div class="task-details"><ul><li>Đừng quên cập nhật CA Profile trên hệ thống (Dành cho CA chính thức - đã có CCHN)</li></ul></div>
               <div><div class="result-chip">Khách hàng có thể tìm thấy bạn</div><div class="buddy-chip">Manager</div></div>
             </div>
           </div>
