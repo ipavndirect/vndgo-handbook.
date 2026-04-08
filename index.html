@@ -1041,7 +1041,66 @@
   content: none !important;
 }
 
+/* mentor click modal */
+.mentor-popup-trigger{
+  cursor:pointer;
+}
 
+.mentor-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:20px;
+}
+
+.mentor-modal.show{
+  display:flex;
+}
+
+.mentor-modal-content{
+  background:#fff;
+  padding:24px 44px;
+  border-radius:20px;
+  border:1px solid #ffe1cf;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  max-width:520px;
+  width:90%;
+  text-align:center;
+}
+
+.mentor-modal-title{
+  font-weight:700;
+  font-size:1.35rem;
+  margin-bottom:20px;
+  color:#c15a00;
+}
+
+.mentor-modal-desc{
+  color:#6b7280;
+  font-size:.95rem;
+  margin-bottom:18px;
+  line-height:1.6;
+}
+
+.mentor-modal-btn{
+  background:linear-gradient(135deg,#ff944d,#ff6a00);
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.2s ease;
+}
+
+.mentor-modal-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 4px 12px rgba(255,106,0,.3);
+}
 
 </style>
 </head>
@@ -1196,9 +1255,9 @@
         <div class="subcard warm">
           <h3>🤝 Hệ sinh thái đồng hành cùng bạn</h3>
           <ul class="bullet-list">
-            <li><span class="support-item support-item-tooltip popup-tip" data-popup="Liên hệ Mentor để được hỗ trợ"><span>Group DLink: Support CA KHCN</span></span></li>
-            <li><span class="support-item support-item-tooltip popup-tip" data-popup="Liên hệ Mentor để được hỗ trợ"><span>Group Dlink: Thông báo nhanh KHCN</span></span></li>
-            <li><span class="support-item">Đầu mối hỗ trợ chung cho CA: Phòng CAPC</span></li>
+            <li><span class="support-item mentor-popup-trigger"><span>Group DLink: Support CA KHCN</span></span></li>
+            <li><span class="support-item mentor-popup-trigger"><span>Group Dlink: Thông báo nhanh KHCN</span></span></li>
+            <li><span class="support-item mentor-popup-trigger">Đầu mối hỗ trợ chung cho CA: Phòng CAPC</span></li>
             <li><a class="support-anchor" href="https://kms.ipas.com.vn/folder/danhbadaumoi" target="_blank" rel="noopener noreferrer"><span class="support-item">Danh sách toàn bộ đầu mối các phòng ban hỗ trợ CA khác</span></a></li>
             <li><a class="support-anchor" href="https://kms.ipas.com.vn/post/huong-dan-tao-jira-cho-doi-ngu-kinh-doanh.d62f11a8-3ed0-4e89-a96f-6738b4058ff4" target="_blank" rel="noopener noreferrer"><span class="support-item">Hướng dẫn tạo yêu cầu hỗ trợ cho đội ngũ kinh doanh</span></a></li>
           </ul>
@@ -1252,11 +1311,6 @@
               <div class="task-details"><ul><li>Được giới thiệu Mentor</li></ul></div>
               <div><div class="result-chip">Có người đồng hành</div><div class="buddy-chip">Manager</div></div>
             </div>
-            <div class="task-item">
-              <div><div class="task-what">Nhận thông tin đào tạo</div></div>
-              <div class="task-details"><ul><li>Check email, tài liệu</li></ul></div>
-              <div><div class="result-chip">Hiểu lộ trình đào tạo</div><div class="buddy-chip">LnD</div></div>
-            </div>
           </div>
         </div>
 
@@ -1296,6 +1350,11 @@
               <div><div class="task-what">Trải nghiệm hệ thống</div></div>
               <div class="task-details"><ul><li>Login tool nội bộ</li></ul></div>
               <div><div class="result-chip">Làm quen công cụ</div><div class="buddy-chip">Mentor</div></div>
+            </div>
+            <div class="task-item">
+              <div><div class="task-what">Nhận thông tin đào tạo</div></div>
+              <div class="task-details"><ul><li>Check email, tài liệu</li></ul></div>
+              <div><div class="result-chip">Hiểu lộ trình đào tạo</div><div class="buddy-chip">LnD</div></div>
             </div>
           </div>
         </div>
@@ -1802,5 +1861,40 @@
 </script>
 
 
+
+  <!-- Mentor popup -->
+  <div id="mentorModal" class="mentor-modal" aria-hidden="true">
+    <div class="mentor-modal-content">
+      <div class="mentor-modal-title">Liên hệ Mentor để được hỗ trợ</div>
+<button type="button" onclick="closeMentorModal()" class="mentor-modal-btn">Đã hiểu</button>
+    </div>
+  </div>
+
+  <script>
+    const mentorModal = document.getElementById('mentorModal');
+    const mentorTriggers = document.querySelectorAll('.mentor-popup-trigger');
+
+    mentorTriggers.forEach(el => {
+      el.addEventListener('click', () => {
+        mentorModal.classList.add('show');
+        mentorModal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeMentorModal(){
+      mentorModal.classList.remove('show');
+      mentorModal.setAttribute('aria-hidden', 'true');
+    }
+
+    mentorModal.addEventListener('click', (e) => {
+      if (e.target === mentorModal) closeMentorModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mentorModal.classList.contains('show')) {
+        closeMentorModal();
+      }
+    });
+  </script>
 </body>
 </html>
